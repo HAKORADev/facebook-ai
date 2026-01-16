@@ -37,9 +37,29 @@ A PyQt5-based Facebook simulation platform that combines a social network GUI wi
 
 ## What Is NOT Working / Incomplete
 
-- **Live Updates** - The notification system and live feed updates are not implemented. The `handle_live_updates()` method has TODO comments for actual data source integration, whether through API polling, websocket, or other real-time mechanisms
+### Core Social Features Missing
 
-- **Friend Agent 1 Integration** - The agent system framework is complete with 10 agent folders, each configured with unique personas, styles, and tools. However, the Friend Agent 1 code (the social interaction AI that was meant to power autonomous friend behavior) was never fully integrated into the main application. This represents the main unfinished piece of the project
+While the foundation exists, many core social features are not yet functional:
+
+- **Direct Messages (DMs)** - The `user/messages/DMs/` folder structure exists and conversation files are created, but there is no UI for viewing or sending direct messages. The messaging system remains completely unimplemented at the interface level
+
+- **Group Chats** - The `user/messages/groups/` folder exists, but group chat functionality has never been built. Users cannot create, join, or participate in group conversations
+
+- **Sharing to Friends** - While the share dialog exists for reposting and quoting, actual sharing to specific friends or friend lists is not implemented. The share functionality is limited to public feed reposts only
+
+- **Real Friend System** - The friend request system (send, accept, decline) is implemented at a basic level, but there is no real friend relationship functionality. Friends do not interact with each other, do not appear in a dedicated friends feed, and do not receive special treatment in the algorithm. The friends list exists but serves no functional purpose beyond being a list
+
+- **Friend Agents** - The `agents/friends/` directory contains 10 agent folders with full configurations including profiles, personas, styles, and tools. However, these agents are completely disconnected from the main application. They are not visible in the interface, do not appear as friends, do not post content, and do not interact with the user. They are essentially "ghost agents" that exist in configuration but have no presence in the application
+
+### AI System Status
+
+- **Random User System Only** - The only AI functionality that exists is the `RandomUserEngine` class, which simulates a random stranger who occasionally appears in the feed and generates posts. This represents the absolute minimum viable AI implementation. All other AI features described in this documentation are either planned, partially implemented, or exist only as configuration
+
+- **No Autonomous Agents** - Despite having 10 agent configurations, there is no autonomous agent system running in the background. The agents do not generate posts, do not comment on user content, do not send friend requests, and do not behave like real users would
+
+### Infrastructure Issues
+
+- **Live Updates** - The notification system and live feed updates are not implemented. The `handle_live_updates()` method has TODO comments for actual data source integration, whether through API polling, websocket, or other real-time mechanisms
 
 - **Real API Integration** - This is a simulation with local JSON data and is not connected to actual Facebook, Instagram, or any real social media APIs. The platform exists entirely as a standalone local application
 
