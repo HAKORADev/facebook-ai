@@ -1,0 +1,11 @@
+# GUI Framework
+PyQt5
+
+# AI and LLM
+google-generativeai
+langchain
+langchain-google-genai
+langchain-core
+
+# Data validation
+pydantic
