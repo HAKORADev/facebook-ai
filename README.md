@@ -1,7 +1,7 @@
 # Facebook AI Simulation Platform
 
-**Status: Unfinished/In Development**  
-*This project may never be completed. Contributions are welcome!*
+**Status: Unfinished/discontinued**  
+*This project will never be completed. Contributions are welcome!*
 
 ## Overview
 
